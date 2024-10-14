@@ -11,6 +11,9 @@ app.use(cors());
 app.use(express.json());
 
 // Routes
+app.get('/', (req, res) => {
+    res.json({ message: 'this is first page' });
+})
 app.get('/api/test1', (req, res) => {
     res.json({ message: 'This is test endpoint 1' });
 });
